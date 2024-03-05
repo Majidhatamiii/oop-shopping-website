@@ -30,7 +30,7 @@ class Products {
     <div id = "product-info">
         <h3>${name}</h3>
         <div>
-            <span>${price}</span>
+            <span>$ ${price}</span>
             <button data-id = ${id}>+</button>
         </div>
     </div>
@@ -48,6 +48,7 @@ class Products {
   addToCart(id) {
     const product = this.products.find((i) => i.id === +id);
     this.cart.products.push(product);
+    this.cart.showProducts();
   }
 }
 
